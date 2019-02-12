@@ -1,8 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
 html {
   background: url("/img/background-shadow.png") no-repeat center center fixed
     #849d8f;
+  margin-right: 26px;
+  margin-left: 26px;
 }
 
 .h-hidden {
   display: none;
+}
+
+.header-main {
+  width: 100%;
+  display: inline-block;
+  margin-top: 10px;
+}
+.header-main img {
+  float: left;
+}
+.nav-main {
+  font-size: 16px;
+}
+.navigation-left {
+  float: left;
+}
+.navigation-left-item {
+  display: inline-block;
+}
+
+.submenu,
+.search-form,
+.login-form {
+  display: none;
+}
+
+.navigation-right {
+  float: right;
+}
+.navigation-right-item {
+  display: inline-block;
+}
+
+.contact-information {
+  float: right;
 }
