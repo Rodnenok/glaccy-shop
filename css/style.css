@@ -22,6 +22,8 @@ html {
   display: none;
 }
 
+/* Стили главного меню */
+
 .header-main {
   width: 100%;
   display: inline-block;
@@ -52,7 +54,73 @@ html {
 .navigation-right-item {
   display: inline-block;
 }
-
 .contact-information {
   float: right;
+}
+
+/* Стили секции слайдер */
+
+.slider {
+  position: relative;
+  text-align: center;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-title {
+  width: 670px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.slider-button {
+  width: 280px;
+  height: 63px;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border-radius: 30px;
+}
+
+.slider-button-text {
+  width: 196px;
+  height: 31px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+/* Стили секции специальное предложение */
+
+.special-offers > div {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.special-offers-malina {
+  background: url("/img/malina.jpg");
+  width: 560px;
+  min-height: 206px;
+  padding-bottom: 23px;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 22px;
+}
+.special-offers-choco {
+  background: url("/img/choco.jpg");
+  width: 560px;
+  min-height: 206px;
+  padding-bottom: 23px;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 22px;
 }
