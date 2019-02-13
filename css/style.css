@@ -70,6 +70,9 @@ html {
   padding: 0;
   list-style: none;
 }
+.slider-list-img {
+  position: absolute;
+}
 
 .slider-title {
   width: 670px;
@@ -93,7 +96,6 @@ html {
   height: 31px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   color: #ffffff;
-  font-family: Roboto;
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
