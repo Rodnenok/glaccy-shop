@@ -61,8 +61,13 @@ html {
 /* Стили секции слайдер */
 
 .slider {
+  margin: 0 auto;
+  padding: 0 20px;
   position: relative;
+  padding-top: 275px;
   text-align: center;
+  color: #ffffff;
+  margin-bottom: 80px;
 }
 
 .slider-list {
@@ -70,11 +75,18 @@ html {
   padding: 0;
   list-style: none;
 }
+
 .slider-list-img {
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .slider-title {
+  position: relative;
   width: 670px;
   margin: 0 auto;
   margin-bottom: 28px;
@@ -82,13 +94,18 @@ html {
   line-height: 60px;
   font-weight: 800;
   text-align: center;
+  z-index: 1;
+  top: 50px;
 }
 
 .slider-button {
+  position: relative;
   width: 280px;
   height: 63px;
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
   border-radius: 30px;
+  z-index: 1;
+  top: 50px;
 }
 
 .slider-button-text {
@@ -103,13 +120,34 @@ html {
 
 /* Стили секции специальное предложение */
 
+.special-offers {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 35px;
+}
+
 .special-offers > div {
-  display: inline-block;
   font-weight: 700;
 }
 
+.special-offers-title {
+  color: #ffffff;
+  font-size: 35px;
+  line-height: 41px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.special-offers-description {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-left: 10px;
+}
+
 .special-offers-malina {
-  background: url("/img/malina.jpg");
+  background: url("/img/malina.jpg") no-repeat no-repeat center;
   width: 560px;
   min-height: 206px;
   padding-bottom: 23px;
@@ -118,11 +156,103 @@ html {
   line-height: 22px;
 }
 .special-offers-choco {
-  background: url("/img/choco.jpg");
+  background: url("/img/choco.jpg") no-repeat no-repeat center;
   width: 560px;
   min-height: 206px;
   padding-bottom: 23px;
   border-radius: 15px;
   font-size: 18px;
   line-height: 22px;
+}
+
+.special-offers-button {
+  width: 165px;
+  height: 46px;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border-radius: 30px;
+  float: right;
+  margin-right: 20px;
+}
+
+.special-offers-button > a {
+  height: 17px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* Стили секции хиты */
+
+.hits-list {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.hits-list-item > img {
+  position: relative;
+  z-index: -1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hits-list-item {
+  display: inline-block;
+  background: url("/img/hit.svg") no-repeat;
+  width: 100%;
+}
+
+.price {
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.price > span:nth-child(3) {
+  font-size: 30px;
+}
+
+.description {
+  text-align: center;
+}
+
+.description > a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  border-bottom: 1px solid #adbdb4;
+}
+
+.hits-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* стили секции описание */
+
+.about {
+  background: url("/img/waffer-background.png") no-repeat no-repeat center;
+  margin: 0px;
+  padding: 24px 20px;
+}
+
+.about > h2 {
+  color: black;
+}
+
+.about-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  color: black;
+}
+
+.about-list-item {
 }
