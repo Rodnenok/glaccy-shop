@@ -1,21 +1,24 @@
+html {
+  background: url("/img/background-shadow.png") no-repeat no-repeat center fixed
+    #849d8f;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 1200px;
+}
+
+.container {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 body {
-  margin: 0;
-  padding: 0;
+  height: 100%;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-}
-
-a {
-  text-decoration: none;
-}
-
-html {
-  background: url("/img/background-shadow.png") no-repeat center center fixed
-    #849d8f;
-  margin-right: 26px;
-  margin-left: 26px;
 }
 
 .h-hidden {
@@ -25,7 +28,7 @@ html {
 /* Стили главного меню */
 
 .header-main {
-  width: 100%;
+  max-width: 1200px;
   display: inline-block;
   margin-top: 10px;
 }
@@ -68,6 +71,7 @@ html {
   text-align: center;
   color: #ffffff;
   margin-bottom: 80px;
+  width: 100%;
 }
 
 .slider-list {
@@ -124,6 +128,8 @@ html {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 35px;
+  width: 100%;
+  text-align: left;
 }
 
 .special-offers > div {
@@ -187,21 +193,27 @@ html {
 
 .hits-list {
   display: flex;
+
   position: relative;
   justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hits-list-item {
+  display: inline-block;
+  text-align: center;
+  flex-basis: 25%;
+  flex-wrap: wrap;
 }
 
 .hits-list-item > img {
   position: relative;
   z-index: -1;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hits-list-item {
   display: inline-block;
-  background: url("/img/hit.svg") no-repeat;
-  width: 100%;
+  margin: auto;
+  padding: auto;
 }
 
 .price {
@@ -209,9 +221,9 @@ html {
   color: #ffffff;
   font-size: 45px;
   font-weight: 700;
-  line-height: 45px;
   position: absolute;
   bottom: 50px;
+  margin-left: 15px;
 }
 
 .price > span:nth-child(3) {
@@ -220,12 +232,13 @@ html {
 
 .description {
   text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .description > a {
   color: #ffffff;
   font-size: 16px;
-  font-weight: 500;
   line-height: 22px;
   border-bottom: 1px solid #adbdb4;
 }

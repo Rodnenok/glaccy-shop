@@ -28,7 +28,12 @@ body {
  * Render the `main` element consistently in IE.
  */
 
-main {
+article,
+aside,
+footer,
+header,
+nav,
+section {
   display: block;
 }
 
@@ -75,6 +80,7 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**
