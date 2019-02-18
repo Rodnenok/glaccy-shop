@@ -74,7 +74,7 @@
                   <div class="auth-links">
                     <a href="#">Забыли пароль?</a>
                     <a href="#">Новая регистрация</a>
-                    <button type="submit">Войти</button>
+                    <button type="submit"> Войти</button>
                   
                 </form>
               </div>
@@ -82,15 +82,15 @@
             <li class="navigation-right-item">
               <a class="cart-button">
                 <img src="/img/basket.svg" alt="" />
-                Пусто
+                 Пусто
               </a>
             </li>
           </ul>
         </div>
       </nav>
         <div class="contact-information">
-        <p>С 10 до 20, ежедневно</p>
-        <p>8 812 450-25-25</p>
+        <p class="contact-time">С 10 до 20, ежедневно</p>
+        <p class="contact-phone">8 812 450-25-25</p>
       </div>
     </header>
     <main class="container">
@@ -256,8 +256,11 @@
       <section class="information">
         <h2 class="h-hidden">Информация</h2>
         <article class="news">
-          <h3>Полезное в нашем блоге</h3>
+          <div class="news-block">
+          <h3>Новое в нашем блоге</h3>
+          
           <a href="#">10 способов сервировки фруктовых щербетов к столу.</a>
+          </div>
         </article>
         <div class="subscribe">
           <p>
@@ -273,23 +276,26 @@
               placeholder="Электронная почта"
               required
             />
-            <button type="submit" name="submit">Отправить</button>
+            <button class="subscribe-form-button" type="submit" name="submit">Отправить</button>
           </form>
         </div>
       </section>
+      </main>
       <section class="map">
-        <h2 class="h-hidden">Карта????</h2>
+        <h2 class="h-hidden">Адрес главного</h2>
         <div class="map-feedback">
+        <div class="map-feedback-content">
           <p>
-            Адрес главного офиса и офлайн-магазина:
-            <strong>ул. Большая Конбшенная 19/8, Санкт-Петербург</strong>
+            Адрес главного офиса <br> и офлайн-магазина:<br>
+            <strong class="map-feedback-strong>">ул. Большая Конбшенная 19/8, Санкт-Петербург</strong>
           </p>
           <p>
-            Для заказов по телефону:
-            <strong>8 812 450-25-25</strong>
+            Для заказов по телефону:<br>
+            <strong class="map-feedback-strong>">8 812 450-25-25</strong>
           </p>
           <p>(с 10 до 20 ежедневно)</p>
           <button type="button">Форма обратной связи</button>
+        </div>
         </div>
       </section>
       <div class="modal-mask h-hidden">
@@ -320,8 +326,8 @@
           </form>
         </section>
       </div>
-    </main>
-    <footer class="footer-main">
+    
+    <footer class="footer-main container">
       <div class="social-wrapper">
         <ul class="social-buttons">
           <li>
@@ -398,20 +404,27 @@
         </ul>
       </div>
       <div class="footer-docs">
+        <div class="docs-left">
         <ul class="docs-list">
           <li class="docs-list-item">
-            <a href="#"><strong>Для поставщиков</strong></a>
+            <a href="#"><strong> Для поставщиков</strong></a>
           </li>
+           <li class="docs-list-item">
+              <a href="#">Наши документы</a>
+            </li>
+        </ul>
+        </div>
+        <div class="docs-right">
+          <ul class="docs-list">
           <li class="docs-list-item">
             <a href="#">О производстве</a>
           </li>
-          <li class="docs-list-item">
-            <a href="#">Наши документы</a>
-          </li>
+         
           <li class="docs-list-item">
             <a href="#">Экологические стандарты</a>
           </li>
         </ul>
+        </div>
       </div>
       <div class="copyright">
         <img
@@ -420,8 +433,9 @@
           height="39px"
           alt=""
         />
-        <p>Сделано в <a href="#">HTML Academy</a> &copy; 2019</p>
-      </div>
+        <div class="link">
+        <p>Сделано в <a class="copyright-link" href="#">HTML Academy</a> &copy; 2019</p>
+        </div></div>
     </footer>
   </body>
 </html>

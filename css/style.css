@@ -1,6 +1,5 @@
 html {
-  background: url("/img/background-shadow.png") no-repeat no-repeat center fixed
-    #849d8f;
+  background: #849d8f;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -45,6 +44,8 @@ body {
 }
 .navigation-left-item {
   display: inline-block;
+  border-bottom: 1px solid #adbdb4;
+  margin-right: 20px;
 }
 
 .submenu,
@@ -58,9 +59,30 @@ body {
 }
 .navigation-right-item {
   display: inline-block;
+  margin-right: 30px;
 }
+
 .contact-information {
   float: right;
+  position: absolute;
+  top: 50px;
+  right: 159px;
+  margin-top: 10px;
+}
+
+.contact-information > p {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.contact-time {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.contact-phone {
+  color: #ffffff;
+  font-size: 22px;
 }
 
 /* Стили секции слайдер */
@@ -112,6 +134,7 @@ body {
   border-radius: 30px;
   z-index: 1;
   top: 50px;
+  border: 0;
 }
 
 .slider-button-text {
@@ -180,6 +203,7 @@ body {
   border-radius: 30px;
   float: right;
   margin-right: 20px;
+  border: 0;
 }
 
 .special-offers-button > a {
@@ -189,6 +213,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  border: 0;
 }
 
 /* Стили секции хиты */
@@ -300,5 +325,195 @@ body {
 .information {
   padding: 0;
   margin: 40px 0px;
+  min-height: 220px;
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.news,
+.subscribe {
+  width: 560px;
+  padding-bottom: 22px;
+  border-radius: 15px;
+}
+
+.news {
+  background: url("/img/strawberry-background.png");
+}
+
+.news-block {
+  width: 286px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.news-block > h3 {
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.news-block > a {
+  color: #323232;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+
+  border-bottom: 2px solid #323232;
+}
+
+.subscribe {
+  background: #f8f7f4;
+  border: 5px solid;
+  border-image: url("/img/subscribe_bg.png") 5 round round;
+}
+
+.subscribe > p {
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding-bottom: 30px;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.subscribe-form-button {
+  width: 129px;
+  height: 44px;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border-radius: 30px;
+  float: right;
+  margin-right: 20px;
+  border: 0;
+  color: white;
+}
+
+input[type="email"] {
+  width: 368px;
+  height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  background-color: #ffffff;
+}
+
+/* Стили секции карта */
+
+.map {
+  background: url("/img/map2.png") no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 430px;
+}
+
+.map-feedback {
+  width: 302px;
+  height: 305px;
+  background-color: #ffffff;
+  float: right;
+  border-radius: 10px;
+  margin: 62px 0;
+  margin-right: 30px;
+}
+
+.map-feedback-content {
+  margin-top: 30px;
+  margin-left: 15px;
+  text-align: left;
+  width: 220px;
+}
+
+.map-feedback-content > p {
+  color: #323232;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.map-feedback-strong {
+  color: #323232;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.map-feedback-content > button {
+  width: 252px;
+  height: 44px;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border-radius: 30px;
+
+  margin-right: 20px;
+  border: 0;
+  color: white;
+}
+
+/* Footer */
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-buttons {
+  display: flex;
+  list-style: none;
+}
+
+.social-buttons > li {
+  padding: 5px;
+}
+
+.footer-docs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.docs-left,
+.docs-right {
+  position: relative;
+  text-align: left;
+  flex-basis: 50%;
+}
+
+.docs-list {
+  list-style: none;
+}
+
+.docs-list-item > a {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 13px;
+  white-space: nowrap;
+  margin: 10px;
+  border-bottom: 1px solid #adbdb4;
+}
+
+.copyright {
+  margin-top: 20px;
+  color: #fefefe;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.copyright > img {
+  position: relative;
+}
+.copyright > p {
+  margin: 0;
+}
+.copyright-link {
+  color: #fefefe;
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 1px solid #adbdb4;
 }
