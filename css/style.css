@@ -7,6 +7,9 @@ html {
   background-attachment: fixed;
 }
 
+.login-form {
+  display: none;
+}
 .container {
   width: 1200px;
   display: flex;
@@ -44,14 +47,45 @@ body {
 }
 .navigation-left-item {
   display: inline-block;
-  border-bottom: 1px solid #adbdb4;
-  margin-right: 20px;
+  margin: 0 5px 5px 0;
+  padding: 6px 12px;
+  border-radius: 30px;
+}
+.submenu {
+  position: absolute;
+  box-sizing: border-box;
+  min-width: 144px;
+  padding: 0;
+  margin-top: 10px;
+  list-style: none;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  text-align: left;
+}
+.submenu-item {
+  padding: 7px 20px;
+}
+.submenu a {
+  color: #333333;
+}
+.submenu-item:hover:not(:first-child) {
+  background-color: #fbded7;
+}
+.submenu-item:active:not(:first-child) {
+  background-color: #f26843;
 }
 
-.submenu,
-.search-form,
-.login-form {
-  display: none;
+.navigation-left-item:hover .submenu {
+  opacity: 1;
+  display: block;
+  z-index: 2;
+}
+.navigation-left-item:hover {
+  color: #333333;
+  background-color: #f8f7f4;
 }
 
 .navigation-right {
@@ -59,14 +93,40 @@ body {
 }
 .navigation-right-item {
   display: inline-block;
-  margin-right: 30px;
+  margin: 0 0 5px 12px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-repeat: no-repeat;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 6px 12px;
+}
+.search-form {
+  position: absolute;
+  box-sizing: border-box;
+  min-width: 144px;
+  padding: 0;
+  margin-top: 10px;
+  list-style: none;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.navigation-right-item:hover {
+  color: #333333;
+  background-color: #f8f7f4;
+}
+.navigation-right-item:hover .search-form {
+  opacity: 1;
+  z-index: 2;
 }
 
 .contact-information {
-  float: right;
   position: absolute;
   top: 50px;
-  right: 159px;
+  right: 380px;
   margin-top: 10px;
 }
 
@@ -111,6 +171,7 @@ body {
   left: 0;
   right: 0;
   top: 0;
+  z-index: -2;
 }
 
 .slider-title {
