@@ -30,7 +30,25 @@ body {
 .h-hidden {
   display: none;
 }
-
+.link {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(248, 247, 244, 0.2);
+}
+.link:hover {
+  color: rgba(242, 104, 67, 1);
+  border-bottom: 1px solid rgba(242, 104, 67, 1);
+}
+.link-active {
+  color: rgba(242, 104, 67, 1);
+  border-bottom: 1px solid rgba(242, 104, 67, 1);
+}
+.btn:hover {
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
+}
+.btn:active {
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
+  box-shadow: 0 2px 2px 0 #ac1000;
+}
 /* Стили главного меню */
 
 .header-main {
@@ -52,6 +70,9 @@ body {
   margin: 0 5px 5px 0;
   padding: 6px 12px;
   border-radius: 30px;
+}
+.navigation-left-item > a {
+  border-bottom: 1px solid rgba(248, 247, 244, 0.2);
 }
 .submenu {
   position: absolute;
@@ -340,10 +361,32 @@ body {
 }
 
 /* Стили секции хиты */
-
+.fast-view-button {
+  opacity: 0;
+  width: 165px;
+  height: 46px;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border-radius: 30px;
+  border: 0;
+  margin-bottom: 20px;
+}
+.fast-view-button > a {
+  height: 17px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  color: #ffffff;
+  font-weight: 700;
+  border: 0;
+}
+.hits-block:hover {
+  transition: all 0.3s ease-out;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+.hits-block:hover .fast-view-button {
+  opacity: 1;
+}
 .hits-list {
   display: flex;
-
   position: relative;
   justify-content: space-between;
   width: 100%;
@@ -372,7 +415,7 @@ body {
   font-size: 45px;
   font-weight: 700;
   position: absolute;
-  bottom: 50px;
+  bottom: 120px;
   margin-left: 15px;
 }
 
@@ -388,9 +431,6 @@ body {
 
 .description > a {
   color: #ffffff;
-  font-size: 16px;
-  line-height: 22px;
-  border-bottom: 1px solid #adbdb4;
 }
 
 .hits-block {
