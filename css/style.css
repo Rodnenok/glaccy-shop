@@ -18,6 +18,10 @@ input[type="search"] {
   flex-wrap: wrap;
   margin: 0 auto;
 }
+.container-map {
+  width: 1200px;
+  margin: 0 auto;
+}
 body {
   height: 100%;
   font-family: "Roboto", "Arial", sans-serif;
@@ -25,8 +29,19 @@ body {
   line-height: 22px;
   color: #ffffff;
 }
+p {
+  word-break: break-word;
+}
 .h-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: rect(0, 0, 0, 0);
 }
 .link {
   text-decoration: none;
@@ -312,7 +327,6 @@ body {
 }
 .special-offers-description {
   color: #ffffff;
-  font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -348,7 +362,7 @@ body {
   border: 0;
 }
 
-.special-offers-button > a {
+.special-offers-button > span {
   height: 17px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   color: #ffffff;
@@ -368,7 +382,13 @@ body {
   border: 0;
   margin-bottom: 20px;
 }
-.fast-view-button > a {
+.img-hit {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fast-view-button > span {
   height: 17px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   color: #ffffff;
@@ -383,6 +403,7 @@ body {
 .hits-block:hover .fast-view-button {
   opacity: 1;
 }
+
 .hits-list {
   display: flex;
   position: relative;
@@ -413,8 +434,8 @@ body {
   font-size: 45px;
   font-weight: 700;
   position: absolute;
-  bottom: 120px;
-  margin-left: 15px;
+  top: 175px;
+  left: 0;
 }
 
 .price > span:nth-child(3) {
@@ -432,6 +453,7 @@ body {
 }
 
 .hits-block {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
@@ -464,6 +486,7 @@ body {
   position: relative;
   text-align: left;
   flex-basis: 50%;
+  max-width: 50%;
 }
 
 .about-list-item > p {
@@ -560,7 +583,7 @@ body {
 
 .map {
   background: url("/img/map2.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   width: 100%;
   height: 430px;
 }
@@ -572,7 +595,6 @@ body {
   float: right;
   border-radius: 10px;
   margin: 62px 0;
-  margin-right: 30px;
 }
 
 .map-feedback-content {
@@ -646,7 +668,6 @@ body {
 
 .docs-list-item > a {
   color: #ffffff;
-  font-family: Roboto;
   font-size: 13px;
   white-space: nowrap;
   margin: 10px;
@@ -656,7 +677,6 @@ body {
 .copyright {
   margin-top: 20px;
   color: #fefefe;
-  font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
