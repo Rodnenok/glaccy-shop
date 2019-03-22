@@ -17,7 +17,7 @@
       <nav class="nav-main">
         <div class="nav-container">
           <ul class="navigation-left">
-            <li class="navigation-left-item">
+            <li class="navigation-left-item catalog-active">
               <a>Каталог </a>
               <ul class="submenu">
                 <li class="submenu-item">
@@ -89,61 +89,40 @@
               </form>
             </li>
             <li class="navigation-right-item">
-              <a class="fill-cart-button">
-                <img src="/img/basket.svg" alt="" />
+              <a class="fill-cart-button ">
+                <img  class="basket-color" src="/img/basket-red.svg" alt="" />
                 2 товара
               </a>
               <ul class="cart-wrapper">
                 <li>
-                  <ul class="сart-card">
-                    <li class="cart-item">
-                      <button class="delete-cart-item" type="button">
-                        Удалить
-                      </button>
-                      <a href="#">
-                        <img
-                          class="cart-item-img"
-                          src="img/icecream-orange.png"
-                          width="33"
-                          height="33"
-                          alt="Пломбир с апельсиновым джемом"
-                        />
-                        <span class="cart-item-title"
-                          >Пломбир с апельсиновым джемом</span
-                        >
-                      </a>
-                      <span class="cart-item-cost"
-                        >1,5 кг x <b>200 руб</b></span
-                      >
-                      <span class="cart-item-price">300 руб</span>
-                    </li>
-                    <li class="cart-item">
-                      <button class="delete-cart-item" type="button">
-                        Удалить
-                      </button>
-                      <a href="#">
-                        <img
-                          class="cart-item-img"
-                          src="img/icecream-strawberry.png"
-                          width="33"
-                          height="33"
-                          alt="Клубничный пломбир с присыпкой  из белого шоколада"
-                        />
-                        <span class="cart-item-title"
-                          >Клубничный пломбир с присыпкой из белого
-                          шоколада</span
-                        >
-                      </a>
-                      <span class="cart-item-cost"
-                        >1,5 кг x <b>300 руб</b></span
-                      >
-                      <span class="cart-item-price">450 руб</span>
-                    </li>
-                    <li class="cart-item-total">
-                      <span>Итого: 750 руб</span>
-                    </li>
-                  </ul>
-                  <a href="#">Оформить заказ</a>
+                  <div class="cart-form">
+                  <table class="cart-table cart-list">
+                    <tr class="cart-list-item">
+                      <td class="cart-list__remove">
+                        <button type="button" class="cart-list-icon-remove">Удалить</button>
+                      </td>
+                      <td class="cart-list-img"><img src="/img/icecream-orange.png" alt="Фотография мороженого" width="33" height="33"></td>
+                      <td class="cart-list-descr">Пломбир с апельсиновым джемом</td>
+                      <td class="cart-list-price">1,5кг <span>x 200 руб.</span></td>
+                      <td class="cart-list-count">300 руб.</td>
+                    </tr>
+                    <tr class="cart-list-item">
+                      <td class="cart-list-remove">
+                        <button type="button" class="cart-list-icon-remove">Удалить</button>
+                      </td>
+                      <td class="cart-list-img"><img src="./img/icecream-strawberry.png" alt="Фотография мороженого" width="33" height="33"></td>
+                      <td class="cart-list-descr">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td class="cart-list-price">1,5кг <span>x 300 руб.</span></td>
+                      <td class="cart-list-count">450 руб.</td>
+                    </tr>
+                    <tr class="cart-list-item">
+                      <td class="cart-list-total" colspan="5"><b>Итого: 750 руб.</b></td>
+                    </tr>
+                  </table>
+                  <div class="cart-btn-block">
+                    <button type="submit" class="cart-btn btn">Оформить заказ</button>
+                  </div>
+                </div>
                 </li>
               </ul>
             </li>
@@ -157,8 +136,8 @@
     </header>
     <main class="container">
       <div class="breadcrumbs">
-        <a class="crumbs" href="index.html"> Главная &#187;</a>
-        <a class="crumbs" href="#"> Каталог &#187;</a>
+        <a class="crumbs link" href="index.html"> Главная &#187;</a>
+        <a class="crumbs link" href="#"> Каталог &#187;</a>
         <span>Сливочное</span>
       </div>
       <h1 class="page-title">Сливочное мороженое</h1>
@@ -183,7 +162,7 @@
             </div>
             <div class="price-wrapper">
               <fieldset class="fieldset-price">
-                <legend class="fieldset-price-title">Цена: 100 руб. - 500 руб.</legend>
+                <legend>Цена: 100 руб. - 500 руб.</legend>
                 <div class="price-controls">
                   <div class="price-scale">
                     <div class="range-bar"></div>
@@ -196,23 +175,124 @@
             <div class="fat-wrapper">
               <fieldset class="fieldset-fat">
                 <legend>Жирность:</legend>
-                <input type="radio" name="zero" value="0" />0%
-                <input type="radio" name="less10" value="10-" checked />до 10%
-                <input type="radio" name="less30" value="30-" />до 30%
-                <input type="radio" name="30more" value="30+" />выше 30%
+                <div class="fat-container">
+                  <label class="fat-label" for="radio-1">
+                    <input
+                      class="fat-input"
+                      id="radio-1"
+                      type="radio"
+                      name="fat"
+                      value="0"
+                    />
+
+                    <span class="fat-indicator"></span>0%
+                  </label>
+                  <label class="fat-label" for="radio-2">
+                    <input
+                      class="fat-input"
+                      id="radio-2"
+                      type="radio"
+                      name="fat"
+                      value="10-"
+                      checked
+                    />
+
+                    <span class="fat-indicator"></span>до 10%
+                  </label>
+                  <label class="fat-label" for="radio-3">
+                    <input
+                      class="fat-input"
+                      id="radio-3"
+                      type="radio"
+                      name="fat"
+                      value="30-"
+                    />
+
+                    <span class="fat-indicator"></span>до 30%
+                  </label>
+                  <label class="fat-label" for="radio-4">
+                    <input
+                      class="fat-input"
+                      id="radio-4"
+                      type="radio"
+                      name="fat"
+                      value="30+"
+                    />
+
+                    <span class="fat-indicator"></span>выше 30%
+                  </label>
+                </div>
               </fieldset>
             </div>
           </div>
           <div class="filters-second-row">
             <fieldset class="fieldset-options">
               <legend>Наполнители:</legend>
-              <input type="checkbox" name="chocolate" checked />шоколадные
-              <input type="checkbox" name="sugar" checked />сахарные присыпки
-              <input type="checkbox" name="fruits" />фрукты
-              <input type="checkbox" name="syrup" />сиропы
-              <input type="checkbox" name="jam" />джемы
+              <div class="options-container">
+                <label class="options-label" for="check-1">
+                  <input
+                    class="options-input"
+                    type="checkbox"
+                    id="check-1"
+                    name="options"
+                    value="chocolate"
+                    checked
+                  />
+
+                  <span class="options-indicator"></span>шоколадные
+                </label>
+                <label class="options-label" for="check-2">
+                  <input
+                    class="options-input"
+                    type="checkbox"
+                    id="check-2"
+                    name="options"
+                    value="sugar"
+                    checked
+                  />
+
+                  <span class="options-indicator"></span>сахарные присыпки
+                </label>
+                <label class="options-label" for="check-3">
+                  <input
+                    class="options-input"
+                    type="checkbox"
+                    id="check-3"
+                    name="options"
+                    value="fruits"
+                  />
+
+                  <span class="options-indicator"></span>фрукты
+                </label>
+                <label class="options-label" for="check-4">
+                  <input
+                    class="options-input"
+                    type="checkbox"
+                    id="check-4"
+                    name="options"
+                    value="syrup"
+                  />
+
+                  <span class="options-indicator"></span>сиропы
+                </label>
+                <label class="options-label" for="check-5">
+                  <input
+                    class="options-input"
+                    type="checkbox"
+                    id="check-5"
+                    name="options"
+                    value="jam"
+                  />
+
+                  <span class="options-indicator"></span>джемы
+                </label>
+              </div>
             </fieldset>
-            <button type="submit" name="Применить">Применить</button>
+            <fieldset>
+              <button type="submit" class="sorting-btn" name="Применить">
+                Применить
+              </button>
+            </fieldset>
           </div>
         </form>
       </section>
@@ -465,8 +545,21 @@
           </li>
         </ul>
       </section>
+      <section class="pagination">
+        <h2 class="h-hidden">Пагинация</h2>
+        <div class="paginator">
+          <a class="paginator-arrow-left" href="#"></a>
+          <span class=" paginator-item paginator-item-checked">1</span>
+          <a class="paginator-item" href="#">2</a>
+          <a class="paginator-item" href="#">3</a>
+          <a class="paginator-item" href="#">4</a>
+          <a class="paginator-item" href="#">5</a>
+          <a class="paginator-arrow-right" href="#"></a>
+        </div>
+        <hr class="line" />
+      </section>
     </main>
-    <footer class="footer-main">
+    <footer class="footer-main container">
       <div class="social-wrapper">
         <ul class="social-buttons">
           <li>
@@ -543,20 +636,28 @@
         </ul>
       </div>
       <div class="footer-docs">
-        <ul class="docs-list">
-          <li class="docs-list-item">
-            <a href="#"><strong>Для поставщиков</strong></a>
-          </li>
-          <li class="docs-list-item">
-            <a href="#">О производстве</a>
-          </li>
-          <li class="docs-list-item">
-            <a href="#">Наши документы</a>
-          </li>
-          <li class="docs-list-item">
-            <a href="#">Экологические стандарты</a>
-          </li>
-        </ul>
+        <div class="docs-left">
+          <ul class="docs-list">
+            <li class="docs-list-item">
+              <span class="heart">	&#160;	&#160;	&#160;</span>
+              <a class="link" href="#"><strong>Для поставщиков</strong></a>
+            </li>
+            <li class="docs-list-item">
+              <a class="link" href="#">Наши документы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-right">
+          <ul class="docs-list">
+            <li class="docs-list-item">
+              <a class="link" href="#">О производстве</a>
+            </li>
+
+            <li class="docs-list-item">
+              <a class="link" href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="copyright">
         <img
@@ -565,7 +666,12 @@
           height="39px"
           alt=""
         />
-        <p>Сделано в <a href="#">HTML Academy</a> &copy; 2019</p>
+        <div class="link">
+          <p>
+            Сделано в
+            <a class="copyright-link link" href="#">HTML Academy</a> &copy; 2019
+          </p>
+        </div>
       </div>
     </footer>
   </body>
