@@ -341,12 +341,15 @@
               <strong class="map-feedback-strong>">8 812 450-25-25</strong>
             </p>
             <p>(с 10 до 20 ежедневно)</p>
-            <button type="button" class="btn">Форма обратной связи</button>
+            <a class="modal-button btn" ref="#modal-mask" onclick="openModal()">
+              <span class="modal-button-span">Форма обратной связи</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <div class="modal-mask h-hidden">
+
+    <div id="modal-mask">
       <section class="modal-callback">
         <h2>Мы обязательно вам ответим!</h2>
         <form class="callback" name="callback">
@@ -369,12 +372,22 @@
           <textarea
             name="callback-message"
             placeholder="Напишите что-нибудь..."
-          ></textarea>
-          <button class="callback-submit" type="submit">Отправить</button>
+            id="callback-message"
+          ></textarea
+          ><br />
+          <button class="callback-submit btn" type="button">Отправить</button>
+          <button
+            onclick="closeModal()"
+            id="close-button"
+            type="button"
+            class="button-close btn"
+          >
+            Закрыть
+          </button>
         </form>
       </section>
     </div>
-
+    <div id="dark-background"></div>
     <footer class="footer-main container">
       <div class="social-wrapper">
         <ul class="social-buttons">
@@ -490,5 +503,6 @@
         </div>
       </div>
     </footer>
+    <script src="/js/script.js"></script>
   </body>
 </html>
