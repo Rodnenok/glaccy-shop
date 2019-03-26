@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <input
+      class=" slider-radio"
+      id="input-1"
+      name="slider-input"
+      type="radio"
+      checked
+    />
+    <input class="slider-radio" id="input-2" name="slider-input" type="radio" />
+    <input class="slider-radio" id="input-3" name="slider-input" type="radio" />
+    <div class="site-bg">
     <header class="header-main container">
       <img src="img/logo.svg" width="154" height="64" alt="Логотип" />
       <nav class="nav-main">
@@ -107,7 +117,11 @@
         <div class="slider-buttons">
           <ul class="slider-list">
             <li class="slider-list-item">
-              <img class="slider-list-img" src="/img/banner2.png" alt="" />
+              <img
+                class="slider-list-img"
+                src="/img/banners/first-banner.png"
+                alt=""
+              />
 
               <h3 class="slider-title">
                 Крем-брюле и пломбир с малиновым джемом
@@ -116,7 +130,49 @@
                 <span class="slider-button-text">Давайте оба!</span>
               </button>
             </li>
+            <li class="slider-list-item">
+              <img
+                class="slider-list-img"
+                src="/img/banners/Chocolate_and_lemon.png"
+                alt=""
+              />
+
+              <h3 class="slider-title">
+                Шоколадный пломбир и лимонный сорбет
+              </h3>
+              <button type="button" class="button slider-button btn">
+                <span class="slider-button-text">Давайте оба!</span>
+              </button>
+            </li>
+            <li class="slider-list-item">
+              <img
+                class="slider-list-img"
+                src="/img/banners/pomade_and_strawberry.png"
+                alt=""
+              />
+
+              <h3 class="slider-title">
+                Пломбир с помадкой и клубничный щербет
+              </h3>
+              <button type="button" class="button slider-button btn">
+                <span class="slider-button-text">Давайте оба!</span>
+              </button>
+            </li>
           </ul>
+          <div class="slider-controls">
+            <label
+              class="slider-control slider-control-1"
+              for="input-1"
+            ></label>
+            <label
+              class="slider-control slider-control-2"
+              for="input-2"
+            ></label>
+            <label
+              class="slider-control slider-control-3"
+              for="input-3"
+            ></label>
+          </div>
         </div>
       </section>
       <section class="special-offers">
@@ -503,6 +559,7 @@
         </div>
       </div>
     </footer>
+    </div>
     <script src="/js/script.js"></script>
   </body>
 </html>

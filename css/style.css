@@ -1,5 +1,5 @@
 html {
-  background: #849d8f;
+  background-color: #849d8f;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -405,7 +405,7 @@ span {
   left: 0;
   right: 0;
   top: 0;
-  z-index: -2;
+  z-index: 1;
 }
 
 .slider-title {
@@ -442,6 +442,53 @@ span {
   line-height: 44px;
 }
 
+.slider-controls {
+  position: absolute;
+  display: flex;
+  width: 100px;
+}
+.slider-radio {
+  display: none;
+}
+
+.slider-control {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+.slider-control:hover {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+.slider-list-item:nth-of-type(1),
+.slider-list-item:nth-of-type(2),
+.slider-list-item:nth-of-type(3) {
+  display: none;
+}
+#input-1:checked ~ .site-bg .container .slider-control-1,
+#input-2:checked ~ .site-bg .container .slider-control-2,
+#input-3:checked ~ .site-bg .container .slider-control-3 {
+  background-color: #ffffff;
+}
+#input-1:checked ~ .site-bg .container .slider-list-item:nth-of-type(1),
+#input-2:checked ~ .site-bg .container .slider-list-item:nth-of-type(2),
+#input-3:checked ~ .site-bg .container .slider-list-item:nth-of-type(3) {
+  display: block;
+}
+#input-1:checked ~ .site-bg {
+  z-index: -3;
+  background: radial-gradient(circle at 50% 380px, #d3fae5, #849d8f 520px);
+}
+#input-2:checked ~ .site-bg {
+  z-index: -3;
+  background: radial-gradient(circle at 50% 380px, #d1e5f6, #8996a6 520px);
+}
+#input-3:checked ~ .site-bg {
+  z-index: -3;
+  background: radial-gradient(circle at 50% 380px, #f7e1d9, #9d8b84 520px);
+}
+
 /* Стили секции специальное предложение */
 
 .special-offers {
@@ -454,6 +501,7 @@ span {
 
 .special-offers > div {
   font-weight: 700;
+  z-index: 2;
 }
 
 .special-offers-title {
@@ -510,6 +558,7 @@ span {
   border: 0;
 }
 
+/* Стили секции хиты */
 /* Стили секции хиты */
 .fast-view-button {
   opacity: 0;
