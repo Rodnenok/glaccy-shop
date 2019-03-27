@@ -90,10 +90,12 @@ span {
   padding: 6px 12px;
   border-radius: 30px;
   position: relative;
+  font-weight: bold;
 }
 .navigation-left-item > a {
   border-bottom: 1px solid rgba(248, 247, 244, 0.2);
 }
+
 .submenu {
   position: absolute;
   box-sizing: border-box;
@@ -112,6 +114,10 @@ span {
 }
 .submenu-item {
   padding: 7px 20px;
+  font-weight: normal;
+}
+.submenu-item:nth-of-type(1) {
+  font-weight: bold;
 }
 .submenu a {
   color: #333333;
@@ -140,6 +146,9 @@ span {
 .navigation-left-item:hover {
   color: #333333;
   background-color: #f8f7f4;
+}
+.navigation-left-item:active {
+  box-shadow: inset 0 2px 1px 0 #696969;
 }
 .catalog-active:hover {
   color: #333333;
@@ -204,11 +213,15 @@ span {
   border-radius: 5px;
   z-index: -1;
   opacity: 0;
-
   width: 300px;
   height: 200px;
   right: 0;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.login-button {
+  width: 103px;
+  height: 48px;
 }
 .cart-wrapper {
   position: absolute;
@@ -245,6 +258,7 @@ span {
   background: url(/img/cross-small.svg) no-repeat;
   left: 5px;
   top: 10px;
+  cursor: pointer;
 }
 
 .cart-list__img img {
@@ -293,10 +307,10 @@ span {
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
   border-radius: 30px;
   border: 0;
-
+  font-weight: bold;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 24px;
 }
@@ -311,16 +325,19 @@ span {
   display: inline-block;
 }
 .button-submit {
-  width: 110px;
-  height: 50px;
+  width: 103px;
+  height: 48px;
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
   border-radius: 30px;
   border: 0;
   float: left;
   padding: 10px;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 25px;
   color: white;
+  box-shadow: 0 1px 2px 0 #ac1000;
+  font-size: 18px;
+  font-weight: bold;
 }
 .auth-links-left,
 .auth-links-right {
@@ -358,24 +375,34 @@ span {
 }
 .contact-information {
   position: absolute;
-  top: 50px;
-  right: 380px;
+  top: -15px;
+  right: 0px;
+  margin-top: 10px;
+}
+.contact-information-catalog {
+  position: absolute;
+  top: 60px;
+  right: 350px;
   margin-top: 10px;
 }
 
 .contact-information > p {
   margin-top: 5px;
   text-align: right;
+  line-height: 0.5;
 }
 
 .contact-time {
   color: #ffffff;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .contact-phone {
   color: #ffffff;
   font-size: 22px;
+  font-weight: bold;
+  line-height: 1.09;
 }
 
 /* Стили секции слайдер */
@@ -837,6 +864,8 @@ span {
   text-align: center;
   margin-top: 20px;
   padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* Footer */
@@ -938,6 +967,38 @@ fieldset > legend {
   border-radius: 30px;
   padding: 6px 12px;
 }
+.sorting {
+  position: relative;
+}
+.sorting select {
+  position: relative;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  display: block;
+
+  width: 195px;
+  height: 36px;
+  padding-top: 9px;
+  padding-right: 35px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+
+  cursor: pointer;
+
+  color: #fff;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sort-icon {
+  width: 11px;
+  height: 10px;
+  position: absolute;
+  top: 54%;
+  right: 25px;
+  background: url("/img/icon-down-dir.png") no-repeat;
+}
 
 .filters-sorting:hover {
   color: #333333;
@@ -975,7 +1036,9 @@ fieldset > legend {
   background-color: #f8f7f4;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  background: url("/img/filter-button.svg");
 }
+
 .range-max {
   left: 117px;
   position: absolute;
@@ -986,6 +1049,7 @@ fieldset > legend {
   background-color: #f8f7f4;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  background: url("/img/filter-button.svg");
 }
 .range-min:hover,
 .range-max:hover {
@@ -1234,9 +1298,8 @@ fieldset > legend {
   border: 0;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
+  font-size: 18px;
+  font-weight: bold;
   margin-top: 10px;
 }
 
