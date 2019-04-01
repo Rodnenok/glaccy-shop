@@ -1302,6 +1302,7 @@ fieldset > legend {
   color: #333333;
   background-color: #ffffff;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .paginator-item-checked:hover {
