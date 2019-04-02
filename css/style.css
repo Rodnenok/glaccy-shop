@@ -21,16 +21,18 @@ input[type="search"] {
 }
 
 .container {
-  width: 1200px;
+  width: 1146px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding: 0 27px;
 }
 .container-map {
   width: 1200px;
   margin: 0 auto;
 }
 body {
+  min-width: 1230px;
   height: 100%;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -438,15 +440,16 @@ span {
 }
 .contact-information {
   position: absolute;
-  top: -15px;
+  top: -27px;
   right: 0px;
   margin-top: 10px;
 }
 .contact-information-catalog {
-  position: absolute;
-  top: 60px;
-  right: 350px;
+  position: relative;
+  top: -30px;
+  right: -345px;
   margin-top: 10px;
+  text-align: right;
 }
 
 .contact-information > p {
@@ -582,7 +585,7 @@ span {
 
 .special-offers {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 35px;
   width: 100%;
   text-align: left;
@@ -683,8 +686,10 @@ span {
 .hits-overlay {
   top: -10px;
   position: absolute;
-  width: 296px;
-  height: 408px;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -60px;
 }
 .hits-block:hover .hits-overlay {
   transition: all 0.3s ease-out;
@@ -695,6 +700,9 @@ span {
 .hits-block:hover .fast-view-button {
   opacity: 1;
   z-index: 10;
+}
+.hits-block:hover {
+  z-index: 100;
 }
 
 .hits-list {
@@ -710,7 +718,7 @@ span {
 .hits-list-item {
   display: inline-block;
   text-align: center;
-  flex-basis: 25%;
+  flex-basis: calc(25% - 26px);
   flex-wrap: wrap;
   padding-bottom: 20px;
 }
@@ -823,6 +831,11 @@ span {
   padding-bottom: 22px;
   border-radius: 15px;
 }
+.subscribe {
+  width: 550px;
+  padding-bottom: 22px;
+  border-radius: 15px;
+}
 
 .news {
   background: url("/img/strawberry-background.png") no-repeat;
@@ -899,7 +912,7 @@ span {
   background-color: #ffffff;
   float: right;
   border-radius: 10px;
-  margin: 62px 0;
+  margin: 62px 27px;
 }
 
 .map-feedback-content {
@@ -966,6 +979,7 @@ span {
 .social-buttons {
   display: flex;
   list-style: none;
+  padding-left: 0;
 }
 
 .social-buttons > li {
@@ -1042,10 +1056,14 @@ span {
 }
 .page-title {
   position: relative;
-  left: -237px;
+  left: -251px;
   margin-left: 0;
   font-size: 35px;
   line-height: 1.3;
+}
+.filters-section {
+  display: flex;
+  justify-content: flex-start;
 }
 .filters-first-row,
 .filters-second-row {
@@ -1055,6 +1073,7 @@ span {
 fieldset {
   border: 0;
   text-align: left;
+  padding-left: 0;
 }
 fieldset > legend {
   margin-left: 12px;
@@ -1274,6 +1293,7 @@ fieldset > legend {
   text-align: right;
   font-size: 0;
   margin-left: auto;
+  max-width: 1146px;
 }
 .paginator {
   padding-bottom: 35px;
@@ -1332,7 +1352,7 @@ fieldset > legend {
   height: 1px;
   outline: none;
   border: none;
-  width: 1200px;
+  width: 1146px;
   background-color: #cacac7;
 }
 
