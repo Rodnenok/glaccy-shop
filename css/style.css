@@ -12,14 +12,12 @@ a[href] {
 .tel {
   color: #ffffff;
 }
-
 input[type="email"],
 input[type="password"],
 input[type="search"] {
   border: 1px solid rgba(178, 178, 178, 0.52);
   background-color: #ffffff;
 }
-
 .container {
   width: 1146px;
   display: flex;
@@ -43,7 +41,6 @@ p,
 span {
   word-break: break-word;
 }
-
 .h-hidden {
   position: absolute;
   width: 1px;
